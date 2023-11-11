@@ -1,4 +1,4 @@
-package toys_raffle;
+package toys_raffle.modeles;
 
 public class Toy {
     protected int id;

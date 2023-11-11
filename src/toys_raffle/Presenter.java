@@ -1,5 +1,9 @@
 package toys_raffle;
 
+import toys_raffle.modeles.Shop;
+import toys_raffle.modeles.Toy;
+import toys_raffle.modeles.Winners;
+
 public class Presenter {
     Shop shop = new Shop();
     Winners winners = new Winners();

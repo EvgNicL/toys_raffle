@@ -1,4 +1,5 @@
-package toys_raffle;
+package toys_raffle.modeles;
+
 import java.util.ArrayList;
 
 public class Shop implements IShop {

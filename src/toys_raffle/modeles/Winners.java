@@ -1,11 +1,14 @@
-package toys_raffle;
+package toys_raffle.modeles;
+
+import toys_raffle.modeles.IWinners;
+import toys_raffle.modeles.Toy;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Winners implements IWinners{
+public class Winners implements IWinners {
     ArrayList<Toy> winners;
     public Winners(){
         winners = new ArrayList<>();
