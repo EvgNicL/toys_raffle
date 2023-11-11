@@ -1,4 +1,4 @@
-package Toys;
+package toys_raffle;
 
 import java.util.ArrayList;
 
@@ -8,6 +8,7 @@ public interface IShop {
 
     void printToyList();
     ArrayList<Toy> getToysList();
+    int getId();
 
 
 }

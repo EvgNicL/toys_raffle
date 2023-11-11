@@ -1,4 +1,4 @@
-package Toys;
+package toys_raffle;
 import java.util.ArrayList;
 
 public class Shop implements IShop {
@@ -44,7 +44,7 @@ public class Shop implements IShop {
                     t.weight = newWeight;
                     System.out.println();
                     System.out.println("Вес игрушки скорректирован");
-                    System.out.println(t.toString());
+                    System.out.println(t);
                     break;
                 }
             }

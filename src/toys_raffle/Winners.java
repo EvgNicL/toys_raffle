@@ -1,4 +1,4 @@
-package Toys;
+package toys_raffle;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -28,11 +28,7 @@ public class Winners implements IWinners{
         }
         return winners;
     }
-    public void printWinnersList(){
-        for (Toy t: winners){
-            System.out.println(t.toString());
-        }
-    }
+
     private int getRandom(ArrayList<Toy> toys){
         int totalW = 0;
         Random random = new Random();
@@ -51,7 +47,7 @@ public class Winners implements IWinners{
             System.out.println();
             System.out.println("Ваш приз !!!! (((...");
             System.out.println("id: " + winner.id + "  name:  " + winner.name);
-            fw.write(String.valueOf(String.valueOf("id: " + winner.id + "  name:  " + winner.name)));
+            fw.write("id: " + winner.id + "  name:  " + winner.name);
             fw.append('\n');
         }
         catch (IOException e) {

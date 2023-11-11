@@ -1,4 +1,4 @@
-package Toys;
+package toys_raffle;
 
 public class Toy {
     protected int id;
@@ -10,13 +10,8 @@ public class Toy {
         this.id = id;
         this.name = name;
         this.weight = weight;
-        this.count = count;;
+        this.count = count;
     }
-
-    public String getName() {
-        return name;
-    }
-
     @Override
     public String toString() {
         return "toy {" +

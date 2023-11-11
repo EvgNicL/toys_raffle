@@ -1,4 +1,4 @@
-package Toys;
+package toys_raffle;
 
 import java.util.ArrayList;
 

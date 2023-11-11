@@ -1,6 +1,4 @@
-package Toys;
-
-import java.util.ArrayList;
+package toys_raffle;
 
 public class Presenter {
     Shop shop = new Shop();
