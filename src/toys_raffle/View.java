@@ -1,3 +1,4 @@
+
 package toys_raffle;
 
 
@@ -25,8 +26,23 @@ public class View {
         System.out.println("Введите id: ");
         return scanner.nextInt();
     }
-    public int  weightRqw() {
-        System.out.println("Введите вес(частоту выпадения): ");
-        return scanner.nextInt();
+
+    public Double  weightRqw() {
+        try {
+            System.out.println("Введите вес(частоту выпадения, формат: от 0.0 до 1.0) : ");
+            return scanner.nextDouble();
+        } catch (Exception e) {
+            System.out.println("обломинго");
+
+        }
+        return scanner.nextDouble();
     }
+//    public String nameRqw() {
+//        System.out.println("name: ");
+//        return scanner.next();
+//    }
+//    public int countRqw() {
+//        System.out.println("count: ");
+//        return scanner.nextInt();
+//    }
 }

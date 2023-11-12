@@ -4,7 +4,7 @@ public class Toy {
     protected int id;
     protected String name;
     Double weight;
-    int count;
+    protected int count;
 
     public Toy (int id, String name, Double weight, int count){
         this.id = id;
