@@ -1,8 +1,5 @@
 package toys_raffle.modeles;
 
-import toys_raffle.modeles.IWinners;
-import toys_raffle.modeles.Toy;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
