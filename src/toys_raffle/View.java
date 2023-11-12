@@ -10,23 +10,43 @@ public class View {
         this.scanner = new Scanner(System.in);
     }
 
-    public int menuRqw() {
-        System.out.println("\n1 - добавить новую игрушку \n2 - просмотреть список игрушек в магазине \n3 - " +
-                "изменить частоту выпадения игрушки \n4 - розыгрыш \n");
+    public int startRqw() {
+        System.out.println("\n1 - продолжить работу\n2 - выход \n");
         return scanner.nextInt();
+    }
+    public int menuRqw(){
+        try {
+            System.out.println("""
+
+                1 - добавить новую игрушку\s
+                2 - просмотреть список игрушек в магазине\s
+                3 - изменить частоту выпадения игрушки\s
+                4 - розыгрыш""");
+            return scanner.nextInt();
+        } catch (RuntimeException e){
+            System.out.println("\nне корректный ввод\n");
+        }
+        return 0;
     }
 
-    public int startRqw() {
-        System.out.println("\nПродолжить работу (1) или завершить и сохранить изменения (2): ");
-        return scanner.nextInt();
-    }
 
     public int idRqw() {
-        System.out.println("Введите id: ");
-        return scanner.nextInt();
+        try {
+            System.out.println("Введите id: ");
+            return scanner.nextInt();
+        } catch (RuntimeException e){
+            System.out.println("\nне корректный ввод\n");
+        }
+        return 0;
     }
-    public int  weightRqw() {
-        System.out.println("Введите вес(частоту выпадения): ");
-        return scanner.nextInt();
+    public Double  weightRqw() {
+        try {
+            System.out.println("Введите вес(частоту выпадения) ЧЕРЕЗ ЗАПЯТУЮ: ");
+            return scanner.nextDouble();
+        } catch (RuntimeException e){
+
+            System.out.println("\nЧЕРЕЗ ЗАПЯТУЮ!!!!");
+        }
+        return null;
     }
 }

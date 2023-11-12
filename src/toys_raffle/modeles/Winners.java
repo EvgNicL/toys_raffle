@@ -14,22 +14,27 @@ public class Winners implements IWinners {
         winners = new ArrayList<>();
     }
     public ArrayList<Toy> getWinnersList(ArrayList<Toy> toys){
-        int r = getRandom(toys);
-        int l = winners.size();
-        int w = 0;
-        while (l < 11){
-            for (Toy t: toys) {
-                int w0 = w + 1;
-                w += (int) (t.count * t.weight * 100);
-                if (w0 <= r &&  r <= w){
-                    winners.add(t);
-                    toys.remove(t);
-                    break;
+        if (!toys.isEmpty()){
+            int r = getRandom(toys);
+            int l = winners.size();
+            int w = 0;
+            while (l < 11){
+                for (Toy t: toys) {
+                    int w0 = w + 1;
+                    w += (int) (t.count * t.weight * 100);
+                    if (w0 <= r &&  r <= w){
+                        winners.add(t);
+                        toys.remove(t);
+                        break;
+                    }
                 }
+                l += 1;
             }
-            l += 1;
+            return winners;
         }
-        return winners;
+        else System.out.println("Магазин пуст!");
+
+        return null;
     }
 
     private int getRandom(ArrayList<Toy> toys){
@@ -42,7 +47,11 @@ public class Winners implements IWinners {
     }
 
     public Toy getPrize(ArrayList<Toy> winners){
-        return winners.getFirst();
+        if (!winners.isEmpty()){
+            return winners.getFirst();
+        }
+        else System.out.println("Магазин пуст!");
+        return null;
     }
 
     public void saveWinnerToFile(String file, Toy winner){

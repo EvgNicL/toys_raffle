@@ -11,12 +11,12 @@ public class Shop implements IShop {
     }
 
     public int getId(){
-        int max_id = 0;
-        for (Toy t: toys) {
-            if (t.id > max_id) {
-                max_id = t.id;            }
+        int maxId;
+        if (!toys.isEmpty()){
+            maxId = toys.getLast().id+1;
         }
-        return max_id;
+        else maxId = 1;
+        return maxId;
     }
     @Override
     public void addToy(Toy toy) {
